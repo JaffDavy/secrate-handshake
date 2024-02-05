@@ -5,7 +5,7 @@ function generateSecretHandshake () {
     return
   }
 
-  const binaryRepresentation = numberInput.toString(2); // Convert the number to binary
+  const binaryRepresentation = numberInput.toString(2) // Convert the number to binary
   const handshake = decodeBinary(binaryRepresentation)
 
   const secretHandshakeElement = document.getElementById('secretHandshake')
@@ -25,7 +25,7 @@ function decodeBinary (binaryString) {
 
   for (let i = 0; i < binaryString.length; i++) {
     if (binaryString[i] === '1') {
-      if (handshakeActions[i] === "Reverse the order") {
+      if (handshakeActions[i] === 'Reverse the order') {
         decodedHandshake.reverse()
       } else {
         decodedHandshake.push(handshakeActions[i])
